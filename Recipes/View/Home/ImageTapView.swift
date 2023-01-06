@@ -7,7 +7,7 @@
 
 import UIKit
 
-class ImageTapView: BaseView {
+class ImageTapView: BaseUIView {
 	private var touchUpInside: () -> Void = {}
 	
 	lazy var backgroundImage: UIImageView = {

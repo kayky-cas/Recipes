@@ -10,5 +10,5 @@ import Foundation
 struct Recipe {
 	let title: String
 	let description: String
-	let howToCook: [String]
+	let howToMake: [String]
 }

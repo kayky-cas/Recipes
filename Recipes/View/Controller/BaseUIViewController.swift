@@ -7,17 +7,17 @@
 
 import UIKit
 
-class BaseViewController: UIViewController {
+class BaseUIViewController: UIViewController {
 	override func viewDidLoad() {
 		super.viewDidLoad()
 		
 		view.backgroundColor = .systemGray6
 		
-		(view as! BaseView).setup()
+		(view as! BaseUIView).setup()
 	}
 	
 	override func viewDidLayoutSubviews() {
 		super.viewDidLayoutSubviews()
-		(view as! BaseView).setupConstraints()
+		(view as! BaseUIView).setupConstraints()
 	}
 }

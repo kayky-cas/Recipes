@@ -7,11 +7,23 @@
 
 import UIKit
 
-class RegisterViewController: BaseViewController {
+class RegisterViewController: BaseUIViewController {
+	let recipeViewModel = RecipeViewModel()
 	let registerView = RegisterView()
 	
 	override func loadView() {
 		super.loadView()
 		view = registerView
+	}
+	
+	override func viewDidLoad() {
+		super.viewDidLoad()
+		
+		registerView.setCreateRecipe(completion: createRecipe)
+	}
+	
+	func createRecipe(_ recipe: Recipe) {
+		recipeViewModel.addRecipe(recipe: recipe)
+		navigationController?.popToRootViewController(animated: true)
 	}
 }

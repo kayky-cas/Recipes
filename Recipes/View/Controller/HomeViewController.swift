@@ -7,7 +7,7 @@
 
 import UIKit
 
-class HomeViewController: BaseViewController {
+class HomeViewController: BaseUIViewController {
 
 	let homeView = HomeView()
 	
@@ -19,7 +19,7 @@ class HomeViewController: BaseViewController {
 	override func viewDidLoad() {
 		super.viewDidLoad()
 		
-		homeView.setNavigationToTapImages(register: navigateToRegister, show: navigateToShow)
+		homeView.setNavigationToTapImages(register: navigateToRegister, show: navigateToRecipes)
 	}
 	
 	func navigateToRegister() {
@@ -28,9 +28,9 @@ class HomeViewController: BaseViewController {
 	}
 	
 	// TODO
-	func navigateToShow() {
-		let registerViewController = RegisterViewController()
-		navigationController?.pushViewController(registerViewController, animated: true)
+	func navigateToRecipes() {
+		let recipesViewController = RecipesViewController()
+		navigationController?.pushViewController(recipesViewController, animated: true)
 	}
 }
 

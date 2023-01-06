@@ -7,7 +7,7 @@
 
 import UIKit
 
-class HomeView: BaseView {
+class HomeView: BaseUIView {
 	
 	lazy var registerImageTapView: ImageTapView = {
 		let imageTapView = ImageTapView()
@@ -29,7 +29,7 @@ class HomeView: BaseView {
 		return imageTapView
 	}()
 	
-	var views: [BaseView] = []
+	var views: [BaseUIView] = []
 	
 	override func setup() {
 		
